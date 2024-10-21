@@ -1,0 +1,129 @@
+.navbar {
+    background-color: #808080; /* Gray background */
+    padding: 15px; /* Padding around the navbar */
+    text-align: center; /* Center the text */
+}
+
+.navbar-text {
+    color: #fff; /* White text color */
+    font-size: 24px; /* Increase font size */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+.main-img {
+    background-image: url('your-main-image-url.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    height: 500px; /* Set the height of the main image section */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    color: #f5f5dc; /* Text color */
+    text-align: center; /* Center text */
+    position: relative; /* Position relative for overlay */
+}
+
+.main-img-content {
+    position: relative; /* Position relative for the content */
+    z-index: 2; /* Ensure content is above the background */
+    max-width: 800px; /* Max width for text content */
+    width: 90%; /* Responsive width */
+    padding: 0 20px; /* Horizontal padding */
+}
+
+.main-img::before {
+    content: ''; /* Add a pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    bottom: 0; /* Align to the bottom */
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with transparency */
+    z-index: 1; /* Ensure overlay is below the content */
+}
+
+h1 {
+    font-size: 48px; /* Large heading */
+    margin: 0; /* Remove default margin */
+}
+
+p {
+    font-size: 20px; /* Subheading size */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+.cta-button {
+    background-color: #f5f5dc; /* Cream color */
+    color: #333; /* Text color */
+    padding: 10px 20px; /* Padding for button */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.cta-button:hover {
+    background-color: #888888; /* Darker cream on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-img {
+        height: 300px; /* Reduce height for smaller screens */
+    }
+
+    h1 {
+        font-size: 32px; /* Smaller heading */
+    }
+
+    p {
+        font-size: 16px; /* Smaller subheading */
+    }
+
+    .cta-button {
+        padding: 8px 16px; /* Adjust button padding */
+    }
+}
+
+.image-container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the image container */
+    align-items: center; /* Center vertically */
+    padding: 20px; /* Padding around the outer layer */
+}
+
+.outer-layer {
+    border: 3px solid #333; /* Dark border around the image */
+    border-radius: 8px; /* Rounded corners */
+    padding: 5px; /* Padding inside the outer layer */
+    background-color: #f5f5dc; /* Light background color for the outer layer */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    max-width: 80%; /* Set a maximum width for the outer layer */
+    width: auto; /* Allow it to adjust based on content */
+    margin: 0 10%; /* Add margin on left and right to create spacing */
+    overflow: hidden; /* Hide overflow if the image exceeds the height */
+}
+
+.main-image {
+    display: block; /* Remove inline spacing */
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 400px; /* Set a maximum height for the image */
+    border-radius: 4px; /* Rounded corners for the image */
+    object-fit: cover; /* Cover the container without stretching */
+}
+
+.image-text-container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space items evenly */
+    padding: 20px; /* Add some padding around the container */
+}
+
+.image-container {
+    flex: 1; /* Allow the image container to grow */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.text-container {
+    flex: 2; /* Allow the text container to take more space */
+}
